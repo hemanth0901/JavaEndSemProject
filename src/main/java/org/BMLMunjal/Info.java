@@ -54,15 +54,15 @@ class Info {
 
     public void getData() {
         System.out.print("\nEnter Your Name (without space): ");
-        name = sc.nextLine();
+        setName(sc.nextLine());
         System.out.print("\nEnter Your No.: ");
-        no = sc.nextInt();
+        setNo(sc.nextInt());
         System.out.print("\nEnter Morning OR Evening: ");
-        day = sc.next();
+        setDay(sc.next());
         System.out.print("\nEnter Milk in liters: ");
-        milk = sc.nextFloat();
+        setMilk(sc.nextFloat());
         System.out.print("\nEnter Milk fat: ");
-        fat = sc.nextInt();
+        setFat(sc.nextInt());
     }
 
     public void putData() {
@@ -72,9 +72,9 @@ class Info {
         System.out.println("\n\tYOUR BILL-");
         System.out.println("\n\t\t  ====================================");
         System.out.println("\n\t\t|          SUNITA milk dairy           |");
-        System.out.println("\n\t\t  Name : " + name + "       No:" + no);
-        System.out.println("\n\t\t  Milk session: " + day);
-        System.out.println("\n\t\t  Milk : " + milk + " Litre" + "      Fat: " + fat);
+        System.out.println("\n\t\t  Name : " + getName() + "       No:" + getNo());
+        System.out.println("\n\t\t  Milk session: " + getDay());
+        System.out.println("\n\t\t  Milk : " + getMilk() + " Litre" + "      Fat: " + getFat());
         System.out.println("\n\t\t| Fat rate: " + fatT + "     Total: " + total + "rs  |");
         System.out.println("\n\t\t  ====================================");
     }

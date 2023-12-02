@@ -11,11 +11,15 @@ import java.util.Scanner;
 
 public class Application {
     private String user;
-    private final Scanner sc;
-    private final Connection connection;
+    private Scanner sc;
+    private Connection connection;
     Application(Scanner sc){
         this.sc = sc;
         this.connection = DbConnection.getDbConnection();
+    }
+    Application(Scanner sc,Connection connection){
+        this.sc = sc;
+        this.connection = connection;
     }
     public String getUser(){
         return this.user;
