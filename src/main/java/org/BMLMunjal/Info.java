@@ -3,11 +3,11 @@ package org.BMLMunjal;
 import java.util.Scanner;
 
 class Info {
-    public String name;
-    public int no;
-    public int fat;
-    public float milk;
-    public String day;
+    private String name;
+    private int no;
+    private int fat;
+    private float milk;
+    private String day;
     private Scanner sc;
 
     Info(Scanner sc){
