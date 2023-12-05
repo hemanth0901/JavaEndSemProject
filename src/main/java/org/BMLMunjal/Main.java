@@ -25,6 +25,7 @@ public class Main {
             }
             else{
                 System.out.println("Please register again");
+                app.register();
             }
         }
         Menu menu = new Menu(sc, app.getUser());
