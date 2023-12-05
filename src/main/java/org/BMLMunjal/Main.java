@@ -4,12 +4,22 @@ import org.BMLMunjal.DatabaseConnection.DbConnection;
 
 import java.awt.*;
 import java.util.Scanner;
+import java.io.File;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        Application app = new Application(sc);
-        System.out.println("\n\t\t\tWanna log-in[1] or Register[2]");
+        Scanner sc;
+        Application app = new Application();
+        try{
+            sc = new Scanner(new File("C:\\\\Users\\\\maral\\\\Desktop\\\\java project\\\\JavaEndSemProject\\\\input.txt"));
+            System.out.println("\n\t\t\t"+sc.nextLine());
+            sc.close();
+        }
+        catch(Exception e){
+            System.out.println(e);
+        }
+        sc = new Scanner(System.in);
+
         int option = sc.nextInt();
         if(option == 1) {
             boolean didLogin = app.login();
@@ -25,11 +35,13 @@ public class Main {
             }
             else{
                 System.out.println("Please register again");
+                app.register();
             }
         }
         Menu menu = new Menu(sc, app.getUser());
         menu.menu();
         sc.close();
+        app.sc.close();
         DbConnection.closeDbConnection();
     }
 }
